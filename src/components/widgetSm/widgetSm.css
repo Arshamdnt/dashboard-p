@@ -1,55 +1,116 @@
-.widgetSm{
+/* باکس کلی */
+.widgetSm {
     flex: 1;
-    padding: 15px;
-    box-shadow: 0px 0px 15px -8px rgb(0, 0, 0,0.75);
-    margin-right: 10px;
-}
-.widgetSmTitle{
-    font-size: 22px;
-    font-weight: 600;
-    
+    padding: 25px;
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    transition: all 0.3s ease;
 }
 
-.widgetSmList{
+.widgetSm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* عنوان */
+.widgetSmTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* لیست */
+.widgetSmList {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.widgetSmListItem{
+/* آیتم‌های لیست */
+.widgetSmListItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin: 15px 0;
+    padding: 15px;
+    background: linear-gradient(90deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
-.widgetSmImg{
-    width: 40px;
-    height: 40px;
+
+.widgetSmListItem:hover {
+    background: linear-gradient(90deg, #f0f4f8, #e0e7ff);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تصویر کاربر */
+.widgetSmImg {
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #2563eb;
+    transition: transform 0.3s ease;
 }
-.widgetSmUser{
+
+.widgetSmImg:hover {
+    transform: scale(1.1);
+}
+
+/* اطلاعات کاربر */
+.widgetSmUserDetails {
     display: flex;
-   
     align-items: center;
+}
+
+.widgetSmUser {
+    display: flex;
     flex-direction: column;
+    margin-right: 15px;
 }
-.widgetSmUsername{
+
+.widgetSmUsername {
     font-weight: 600;
+    color: #111827;
+    font-size: 16px;
 }
-.widgetSmUserTitle{
-    font-weight: 300;
+
+.widgetSmUserTitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: #6b7280;
 }
-.widgetSmButtom{
+
+/* دکمه */
+.widgetSmButton {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 7px 10px ;
-    background-color: #eeeef7;
-    color: #555;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(59, 130, 246, 0.2);
 }
-.widgetSmIcon{
-    font-size: 16px;
+
+.widgetSmButton:hover {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+.widgetSmIcon {
+    font-size: 18px;
+    margin-right: 5px;
 }

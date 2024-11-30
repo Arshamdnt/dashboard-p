@@ -1,0 +1,65 @@
+/* استایل اصلی برای آیکون‌ها */
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    background: linear-gradient(to right, #f3faff, rgb(242, 240, 243));
+    flex: 4;
+  }
+  
+  .social-icon {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 15px;
+    z-index: 1;
+  }
+  
+  /* آیکون گیت‌هاب فعال */
+  .github-icon {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .github-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #444;
+  }
+  
+  .github-icon:hover .MuiSvgIcon-root {
+    color: #751bdc;
+  }
+  
+  /* آیکون‌های غیر فعال */
+  .instagram-icon,
+  .linkedin-icon {
+    color: #ccc; /* رنگ کمرنگ برای آیکون‌های غیرفعال */
+    pointer-events: none; /* غیرفعال کردن کلیک */
+  }
+  
+  .instagram-icon:hover,
+  .linkedin-icon:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  /* نمایش متن "غیرفعال" برای آیکون‌های غیر فعال */
+  .instagram-icon::after,
+  .linkedin-icon::after {
+    content: 'غیرفعال';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  

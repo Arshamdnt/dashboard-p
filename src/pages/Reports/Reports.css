@@ -1,0 +1,94 @@
+.reports-container {
+    padding: 40px;
+    background-color: #f4f6f8;
+    flex: 4;
+  }
+  
+  .reports-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 150px; /* Fixed height for cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1d6e85, #0072ff) !important; /* گرادیانت زیبا */
+  }
+  .card-title {
+    font-size: 18px;
+    color: #ffe7e7;
+    margin-bottom: 10px;
+  }
+  
+  .card-number {
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    
+  }
+  
+
+  
+  .chart-card {
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs {
+    margin-bottom: 20px;
+  }
+  
+  .MuiTab-root {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .MuiTab-root.Mui-selected {
+    color: #2196f3;
+  }
+  
+  .MuiTabs-indicator {
+    background-color: #008cff;
+  }
+  
+  .chart-container {
+    height: 400px;
+  }
+  
+  .charts-container {
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .reports-title {
+      font-size: 24px;
+    }
+  
+    .card {
+      height: 120px;
+    }
+  
+    .card-number {
+      font-size: 22px;
+      padding: 10px;
+    }
+  
+    .MuiTab-root {
+      font-size: 14px;
+    }
+  }
+  

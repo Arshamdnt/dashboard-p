@@ -4,6 +4,8 @@
   background-color: rgb(251, 251, 255);
   position: sticky;
   top: 50px;
+  left: 0;
+  
 }
 
 .sidebarWrapper {
@@ -26,20 +28,42 @@
 }
 
 .sidebarListItem {
-  padding: 5px;
-  cursor: pointer;
-  display: flex;
+   display: flex;
   align-items: center;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.sidebarListItem.active,
 .sidebarListItem:hover {
-  background-color: rgb(240, 240, 255);
+  background-color: #e3f2fd; /* رنگ هاور */
+  color: #1976d2; /* متن آبی */
+}
+
+.sidebarListItem.active {
+  background-color: #d3eafa; /* رنگ لینک فعال */
+  color: #1976d2; /* متن آبی */
+  font-weight: bold;
 }
 
 .sidebarIcon {
-  margin-right: 5px;
+  margin-left: 5px;
   font-size: 20px;
 }
+.sidebarListItem.disabled {
+  color: gray;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+.sidebarListItem.disabled:hover{
+  background-color: rgb(249, 233, 233);
+  color: rgb(206, 47, 47);
+}
+
+.sidebarListItem.disabled .sidebarIcon {
+  color: gray;
+}
+
 

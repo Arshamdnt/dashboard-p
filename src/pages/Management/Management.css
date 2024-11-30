@@ -1,0 +1,142 @@
+/* استایل برای کامپوننت مدیریت */
+.management-container {
+    padding: 40px;
+    font-family: 'IRANSans', sans-serif;
+    background: linear-gradient(to right, #c1c8e4, #f3faff);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+    flex: 4;
+  }
+  
+  .section-title {
+    font-size: 30px;
+    color: #0d47a1;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* بخش نمودار و اطلاعات */
+  .chart-and-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .chart-container {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-container {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-container h3 {
+    font-size: 22px;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  .info-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* بخش‌های مدیریتی */
+  .management-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .management-section {
+    background: linear-gradient(145deg, #8e44ad, #6c3483);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .management-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #9b59b6, #8e24aa);
+  }
+  
+  .management-section h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .management-section ul {
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+  }
+  
+  .management-section ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  
+  .management-section ul li::before {
+    content: '✔';
+    color: #ffeb3b;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .management-section ul li:hover {
+    color: #ffeb3b;
+    cursor: pointer;
+  }
+  
+  .management-section ul li:hover::before {
+    color: #ffeb3b;
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 1024px) {
+    .management-sections {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .chart-and-info {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .management-sections {
+      grid-template-columns: 1fr;
+    }
+  
+    .management-section {
+      padding: 20px;
+    }
+  }
+  

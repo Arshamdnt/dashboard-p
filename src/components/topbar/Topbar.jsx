@@ -1,75 +1,99 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Topbar.css";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
-import CloseIcon from "@mui/icons-material/Close";
 
 export default function Topbar() {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [badgeCount, setBadgeCount] = useState(2);
   const [dismissedNotifications, setDismissedNotifications] = useState([]);
 
-  const handleNotificationClick = () => {
-    setIsNotificationOpen(!isNotificationOpen);
-    setBadgeCount(0);
-  };
-
   const notifications = [
     { id: 1, message: "شما در حال مشاهده نمونه کار علیرضا دیانت هستید" },
     { id: 2, message: "امیدوارم مورد قبول باشد" },
   ];
 
+
+  const notificationRef = useRef(null);
+
+  const handleNotificationClick = () => {
+    setIsNotificationOpen(!isNotificationOpen);
+    setBadgeCount(0);
+  };
+
+
   const handleDismiss = (id) => {
     setDismissedNotifications([...dismissedNotifications, id]);
-    setTimeout(() => {
-      setDismissedNotifications((prev) => prev.filter((notifId) => notifId !== id));
-    }, 400); 
   };
+
+
+  const filteredNotifications = notifications.filter(
+    (notification) => !dismissedNotifications.includes(notification.id)
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (notificationRef.current && !notificationRef.current.contains(event.target)) {
+        setIsNotificationOpen(false);
+      }
+    };
+
+    if (isNotificationOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isNotificationOpen]);
 
   return (
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Alireza Dianat</span>
+          <span className="logo">علیرضا دیانت</span>
         </div>
-
         <div className="topRight">
-          <div className="topbarIconContainer" onClick={handleNotificationClick}>
+          <div
+            className="topbarIconContainer notificationIcon"
+            onClick={handleNotificationClick}
+          >
             <NotificationsIcon />
             {badgeCount > 0 && <span className="topIconBadge">{badgeCount}</span>}
           </div>
-          <div className="topbarIconContainer">
+          <div className="topbarIconContainer languageIcon">
             <LanguageIcon />
-            
           </div>
-          <div className="topbarIconContainer">
+          <div className="topbarIconContainer settingsIcon">
             <SettingsIcon />
           </div>
-          <img src={`${process.env.PUBLIC_URL}/images/user.png`} className="topAvatar" alt="User Avatar" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/user.png`}
+            className="topAvatar"
+            alt="User Avatar"
+          />
         </div>
       </div>
 
+      {/* نمایش پنل نوتیفیکیشن */}
       {isNotificationOpen && (
-        <div className="notificationOverlay" onClick={() => setIsNotificationOpen(false)}>
-          <div className="notificationPanel" onClick={(e) => e.stopPropagation()}>
-            <div className="notificationHeader">
-              <h3>نوتیفیکیشن‌ها</h3>
-              <CloseIcon onClick={() => setIsNotificationOpen(false)} className="closeIcon" />
-            </div>
-            <div className="notificationContent">
-              {notifications.map((notification) => (
-                <div
-                  key={notification.id}
-                  className={`notificationItem ${dismissedNotifications.includes(notification.id) ? "fade-out" : ""}`}
+        <div className="notificationBox" ref={notificationRef}>
+          <div className="notificationHeader">
+            <h3>نوتیفیکیشن‌ها</h3>
+          </div>
+          <div className="notificationList">
+            {filteredNotifications.map((notification) => (
+              <div key={notification.id} className="notificationItem">
+                <span>{notification.message}</span>
+                <button
+                  className="dismissButton"
+                  onClick={() => handleDismiss(notification.id)}
                 >
-                  <span>{notification.message}</span>
-                  <button className="dismissButton" onClick={() => handleDismiss(notification.id)}>
-                    بستن
-                  </button>
-                </div>
-              ))}
-            </div>
+                  بستن
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       )}

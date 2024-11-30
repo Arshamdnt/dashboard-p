@@ -8,36 +8,36 @@ const Feature = () => {
     return (
         <div className="feature">
             <div className='FeatureItem'>
-                <span className='Featuretitle'>Revenue</span>
+                <span className='Featuretitle'>درآمد</span>
                 <div className='FeatureContainer'>
                  <span className='FeatureMoney'>$2,415</span>
                     <span className='FeatureRate'>
                     -11.4  <ArrowDownwardOutlinedIcon className="featureIcon Negative"/>
                     </span>   
                 </div>
-                <span className='featureSub'> Compared ti last month</span>
+                <span className='featureSub'> در مقایسه با ماه گذشته</span>
             </div>
 
             <div className='FeatureItem'>
-                <span className='Featuretitle'>Sales</span>
+                <span className='Featuretitle'>فروش</span>
                 <div className='FeatureContainer'>
                  <span className='FeatureMoney'>$4,415</span>
                     <span className='FeatureRate'>
                     -1.7  <ArrowDownwardOutlinedIcon className="featureIcon Negative"/>
                     </span>   
                 </div>
-                <span className='featureSub'> Compared ti last month</span>
+                <span className='featureSub'> در مقایسه با ماه گذشته</span>
             </div>
 
             <div className='FeatureItem'>
-                <span className='Featuretitle'>Cost</span>
+                <span className='Featuretitle'>هزینه</span>
                 <div className='FeatureContainer'>
                  <span className='FeatureMoney'>$2,225</span>
                     <span className='FeatureRate'>
                     +12.5  <ArrowUpwardIcon className="featureIcon"/>
                     </span>   
                 </div>
-                <span className='featureSub'> Compared ti last month</span>
+                <span className='featureSub'> در مقایسه با ماه گذشته</span>
             </div>
         </div>
     );

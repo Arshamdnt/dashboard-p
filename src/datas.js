@@ -1,57 +1,57 @@
 let xAxisData = [
     {
-        "name" : "Jan",
+        "name" : "فروردین",
         "sale" : 112000
     }, 
     {
-        "name" : "Feb",
+        "name" : "اردیبهشت",
         "sale" : 99000
     }, 
     {
-        "name" : "Mar",
+        "name" : "خرداد",
         "sale" : 12000
     }, 
     {
-        "name" : "Apr",
+        "name" : "تیر",
         "sale" : 133000
     }, 
     {
-        "name" : "May",
+        "name" : "مرداد",
         "sale" : 57000
     }, 
     {
-        "name" : "Jun",
+        "name" : "شهریور",
         "sale" : 112000
     }, 
     {
-        "name" : "Jul",
+        "name" : "مهر",
         "sale" : 79000
     }, 
     {
-        "name" : "Agu",
+        "name" : "آبان",
         "sale" : 83000
     }, 
     {
-        "name" : "Sep",
+        "name" : "آذر",
         "sale" : 19000
     }, 
     {
-        "name" : "Oct",
+        "name" : "دی",
         "sale" : 46000
     }, 
     {
-        "name" : "Nov",
+        "name" : "بهمن",
         "sale" : 77000
     }, 
     {
-        "name" : "Dec",
+        "name" : "اسفند",
         "sale" : 98000
     } 
 ];
  
 let newUser = [
     {id : 2 , userName : 'Alireza Ebrahimi' , title : 'SEO Eng ', img : process.env.PUBLIC_URL + '/images/newuser.jpg' },
-    {id : 1 , userName : 'Hoseon Moradi' , title : 'Frontend developer ', img : process.env.PUBLIC_URL + '/images/newuser2.jpg' },
+    {id : 1 , userName : 'Hosein Moradi' , title : 'Frontend developer ', img : process.env.PUBLIC_URL + '/images/newuser2.jpg' },
     {id : 3 , userName : 'Arash Rezavand' , title : 'backend developer ', img : process.env.PUBLIC_URL + '/images/newuser3.jpg' },
     {id : 4 , userName : 'Mohsen Bahmani' , title : 'Hacker', img : process.env.PUBLIC_URL + '/images/newuser4.jpg' }
 ];
@@ -60,31 +60,45 @@ let Transactions = [
     {
     id : 1 ,
     customer : 'Shayan Mohamadi',
-    date : '23 Feb 2024',
-    amount : 145,
+    date : '۱۴۰۲/۱۱/۹',
+    amount : "۱۴۵",
     status : 'Approved',
     img : process.env.PUBLIC_URL + '/images/customer.jpg'},
     {
     id : 2 ,
     customer : 'Maryam Asadi',
-    date : '11 Sep 2024',
-    amount : 78,
+    date : '۱۴۰۲/۱/۳',
+    amount : "۷۸",
     status : 'Pending',
     img : process.env.PUBLIC_URL + '/images/customer3.jpg'},
     {
     id : 3 ,
     customer : 'Amir Frahani',
-    date : '5 Jun 2024',
-    amount : 118,
+    date : '۱۴۰۲/۳/۸',
+    amount : "۵۶",
     status : 'Decline',
     img : process.env.PUBLIC_URL + '/images/customer2.jpg'},
     {
     id : 4 ,
     customer : 'Zahra Amini',
-    date : '15 May 2024',
-    amount : 90,
+    date : '۱۴۰۲/۴/۲۲',
+    amount : "۶۲",
     status : 'Approved',
     img : process.env.PUBLIC_URL + '/images/customer4.jpg'},
+    {
+    id : 5 ,
+    customer : 'kamyar fathi',
+    date : '۱۴۰۱/۳/۱۸',
+    amount : "۴۵",
+    status : 'Approved',
+    img : process.env.PUBLIC_URL + '/images/customer5.jpg'},
+    {
+    id : 6 ,
+    customer : 'Sara karimi',
+    date : '۱۴۰۱/۴/۱۹',
+    amount : "۶۲",
+    status : 'Pending',
+    img : process.env.PUBLIC_URL + '/images/customer6.jpg'},
 ]
 
 let userRows = [
@@ -92,7 +106,7 @@ let userRows = [
     id : 1 ,
     username : 'Sahar Azizi',
     avatar: process.env.PUBLIC_URL + '/images/users4.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$140",
     email : 'Sahar@gmail.com'
  },
@@ -100,7 +114,7 @@ let userRows = [
     id : 2 ,
     username : 'Aref Aghasi',
     avatar: process.env.PUBLIC_URL + '/images/users.jpg',
-    status : 'non-active',
+    status : 'غیر فعال',
     transaction : "$120",
     email : 'Aref@gmail.com'
  },
@@ -108,7 +122,7 @@ let userRows = [
     id : 3 ,
     username : 'Mehdi hoseinzadeh',
     avatar: process.env.PUBLIC_URL + '/images/users2.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$79.5",
     email : 'Mehdi@gmail.com'
  },
@@ -116,7 +130,7 @@ let userRows = [
     id : 4 ,
     username : 'Negar Alipour',
     avatar: process.env.PUBLIC_URL + '/images/users5.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$108",
     email : 'Negar@gmail.com'
  },
@@ -124,7 +138,7 @@ let userRows = [
     id : 5 ,
     username : 'Radin Falah',
     avatar: process.env.PUBLIC_URL + '/images/users3.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$55.78",
     email : 'Radin@gmail.com'
  },
@@ -132,7 +146,7 @@ let userRows = [
     id : 6 ,
     username : 'Armin Ghafouri',
     avatar: process.env.PUBLIC_URL + '/images/user6.jpg',
-    status : 'non-active',
+    status : 'غیر فعال',
     transaction : "$122.19",
     email : 'Armin@gmail.com'
  },
@@ -140,7 +154,7 @@ let userRows = [
     id : 7 ,
     username : 'Mobina Nezamdoost',
     avatar: process.env.PUBLIC_URL + '/images/user7.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$64.5",
     email : 'Mobina@gmail.com'
  },
@@ -148,7 +162,7 @@ let userRows = [
     id : 8 ,
     username : 'Zahra Lotfi',
     avatar: process.env.PUBLIC_URL + '/images/user8.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$53",
     email : 'Zahra@gmail.com'
  },
@@ -156,7 +170,7 @@ let userRows = [
     id : 9 ,
     username : 'Farhad jamali',
     avatar: process.env.PUBLIC_URL + '/images/user9.jpg',
-    status : 'active',
+    status : 'فعال',
     transaction : "$77",
     email : 'farhad@gmail.com'
  },
@@ -194,26 +208,69 @@ let ProductsData = [
     {name : "Feb",sales :2850},
     {name : "Mar",sales :5130}
 ]
-
-const userData = [
-    { name: 'تهران ', latitude: 35.6892, longitude: 51.3890, views: 2500 },
-    { name: 'مشهد ', latitude: 36.2605, longitude: 59.6168, views: 1800 },
-    { name: 'اصفهان ', latitude: 32.6581, longitude: 51.6680, views: 1200 },
-    { name: 'شیراز ', latitude: 29.5912, longitude: 52.5837, views: 900 },
-    { name: 'تبریز ', latitude: 38.0962, longitude: 46.2920, views: 1300 },
-    { name: 'اهواز ', latitude: 31.3202, longitude: 48.6771, views: 1500 },
-    { name: 'رشت ', latitude: 37.2830, longitude: 49.5911, views: 800 },
-    { name: 'کرج ', latitude: 35.8324, longitude: 50.9915, views: 700 },
-    { name: 'قم ', latitude: 34.6399, longitude: 50.8756, views: 600 },
-    { name: 'زاهدان ', latitude: 29.4965, longitude: 60.8650, views: 500 },
-    { name: 'کاشان ', latitude: 33.9910, longitude: 51.4380, views: 400 },
-    { name: 'یاسوج ', latitude: 30.1810, longitude: 51.5920, views: 550 },
-    { name: 'بندر عباس ', latitude: 27.1900, longitude: 56.2840, views: 450 },
-    { name: 'ارومیه ', latitude: 37.5500, longitude: 45.0700, views: 350 },
-    { name: 'گرگان ', latitude: 37.3785, longitude: 57.0779, views: 300 },
-    { name: 'بیرجند ', latitude: 32.8597, longitude: 59.2196, views: 650 },
-    { name: 'یزد ', latitude: 31.8974, longitude: 54.3583, views: 750 },
-    { name: 'کرمان ', latitude: 30.2832, longitude: 57.0780, views: 850 },
+const feedbacks = [
+    {
+      user: "کاربر ۱",
+      comment:
+        "محصولات خیلی خوبه ولی قیمت‌ها یکم بالاست. اگر تخفیف بیشتری باشه عالی میشه",
+      rating: 4,
+    },
+    {
+      user: "کاربر ۲",
+      comment:
+        "سایت فوق‌العاده‌ای هست! همه چیز خیلی منظم و راحت قابل دسترسیه. از طراحی و سرعتش خیلی راضی‌ام",
+      rating: 5,
+    },
+    {
+      user: "کاربر ۳",
+      comment:
+        "بخش پشتیبانی خیلی سریع و حرفه‌ای پاسخ می‌ده، ولی تنوع محصولات می‌تونست بیشتر باشه.",
+      rating: 4,
+    },
+    {
+      user: "کاربر ۴",
+      comment:
+        "اطلاعات محصولات دقیق نیست و عکس‌ها با واقعیت فرق داشت. از خریدم پشیمونم.",
+      rating: 3,
+    },
+    {
+      user: "کاربر ۵",
+      comment:
+        "تجربه خریدم عالی بود! هم ارسال سریع و هم کیفیت بالا. حتماً باز هم خرید می‌کنم.",
+      rating: 5,
+    },
+    {
+      user: "کاربر ۶",
+      comment:
+        "ظاهر سایت جذابه، ولی پیدا کردن محصولات مورد نظرم سخت بود. جستجو باید بهتر بشه",
+      rating: 3,
+    },
+    {
+      user: "کاربر ۷",
+      comment:
+        "سرعت سایت خیلی پایینه. برای هر کلیک باید چند ثانیه صبر کنم. لطفاً این مشکل رو رفع کنید.",
+      rating: 1,
+    },
+    {
+      user: "کاربر ۸",
+      comment:
+        "چندین بار تلاش کردم خرید کنم ولی هر بار پرداخت ناموفق بود. خیلی اذیت شدم.",
+      rating: 3,
+    },
+    {
+      user: "کاربر ۹",
+      comment:
+        "قیمت‌ها مناسب و ارسال به موقع بود، ولی بسته‌بندی محصولات جای بهتر شدن داره.",
+      rating: 4,
+    },
+    {
+      user: "کاربر ۱۰",
+      comment:
+        "تنوع محصولات خیلی خوبه و همه چیز رو می‌تونم اینجا پیدا کنم. عالیه!",
+      rating: 5,
+    },
   ];
+  
 
-export {xAxisData , newUser ,Transactions,userRows,Products,ProductsData,userData,};
+
+export {xAxisData , newUser ,Transactions,userRows,Products,ProductsData,feedbacks};

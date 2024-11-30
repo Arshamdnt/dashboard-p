@@ -13,7 +13,7 @@
     border-radius: 10px;
     cursor: pointer;
     
-    box-shadow: 0 0 15px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px -9px rgba(0, 0, 0, 0.75);
 }
 
 .Featuretitle{
@@ -33,7 +33,7 @@
 .FeatureRate{
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-right: 14px;
 }
 
 .featureIcon{

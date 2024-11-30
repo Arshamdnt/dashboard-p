@@ -1,103 +1,121 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
 import TimelineIcon from "@mui/icons-material/Timeline";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import ReportGmailerrorredOutlinedIcon from '@mui/icons-material/ReportGmailerrorredOutlined';
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import ReportIcon from "@mui/icons-material/WorkOutline";
-
-import { Link } from "react-router-dom";
+import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import "./Sidebar.css";
 
 export default function Sidebar() {
+  const location = useLocation(); // شناسایی مسیر فعلی
+
+  const isActive = (path) => location.pathname === path; // بررسی اینکه مسیر فعلی با مسیر لینک یکسان است
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
+          <h3 className="sidebarTitle">داشبورد</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-              <li className="sidebarListItem active">
+              <li className={`sidebarListItem ${isActive("/") ? "active" : ""}`}>
                 <LineStyleIcon className="sidebarIcon" />
-                Home
+                خانه
               </li>
             </Link>
-
-            
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
+          <h3 className="sidebarTitle">منوی سریع</h3>
           <ul className="sidebarList">
             <Link to="/users" className="link">
-              <li className="sidebarListItem">
+              <li
+                className={`sidebarListItem ${
+                  isActive("/users") ? "active" : ""
+                }`}
+              >
                 <PermIdentityIcon className="sidebarIcon" />
-                Users
+                کاربران
               </li>
             </Link>
 
             <Link to="/products" className="link">
-              <li className="sidebarListItem">
+              <li
+                className={`sidebarListItem ${
+                  isActive("/products") ? "active" : ""
+                }`}
+              >
                 <StorefrontIcon className="sidebarIcon" />
-                Products
+                محصولات
               </li>
             </Link>
 
             <Link to="/Analytics" className="link">
-            <li className="sidebarListItem">
-              <TimelineIcon className="sidebarIcon" />
-              Analytics
+              <li
+                className={`sidebarListItem ${
+                  isActive("/Analytics") ? "active" : ""
+                }`}
+              >
+                <TimelineIcon className="sidebarIcon" />
+                آنالیز
+              </li>
+            </Link>
+
+            <li className="sidebarListItem disabled">
+              <AttachMoneyIcon className="sidebarIcon" />
+              معاملات
+            </li>
+
+          </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">نوتیفیکیشن</h3>
+          <ul className="sidebarList">
+            <Link to='Feedback' className="link">
+            <li className={`sidebarListItem ${
+                  isActive("/Feedback") ? "active" : ""
+                }`}>
+              <DynamicFeedIcon className="sidebarIcon" />
+              بازخورد
+            </li>
+            </Link>
+            <Link to='Reports' className="link">
+            <li className={`sidebarListItem ${
+                  isActive("/Reports") ? "active" : ""
+                }`}>
+              <ReportGmailerrorredOutlinedIcon className="sidebarIcon" />
+              گزارش ها
+            </li>
+            </Link>
+          </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">کارکنان</h3>
+          <ul className="sidebarList">
+            <Link to='Management' className="link">
+            <li className={`sidebarListItem ${
+                  isActive("/Management") ? "active" : ""
+                }`}>
+              <WorkOutlineIcon className="sidebarIcon" />
+              مدیریت
+            </li>
+            </Link>
+            <Link to='About' className="link">
+            <li className={`sidebarListItem ${
+                  isActive("/About") ? "active" : ""
+                }`}>
+              <HelpOutlineIcon className="sidebarIcon" />
+              درباره ما
             </li>
             </Link>
 
             
-            <li className="sidebarListItem">
-              <AttachMoneyIcon className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUpIcon className="sidebarIcon" />
-              Sales
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <MailOutlineIcon className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeedIcon className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutlineIcon className="sidebarIcon" />
-              Messages
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <WorkOutlineIcon className="sidebarIcon" />
-              Manage
-            </li>
-
-            <li className="sidebarListItem">
-              <ReportGmailerrorredOutlinedIcon className="sidebarIcon" />
-              Reports
-            </li>
           </ul>
         </div>
       </div>

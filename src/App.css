@@ -1,3 +1,7 @@
+body {
+  direction: rtl;
+}
+
 * {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;

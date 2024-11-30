@@ -12,36 +12,56 @@
     border-spacing: 20px;
 }
 .WidgetLgTh{
-    text-align: left;
+    text-align: right;
 }
+
 .WidgetLgUser{
     display: flex;
     align-items: center;
 }
-.WidgetLgImg{
+.WidgetLgImg {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid #2563eb;
 }
 .WidgetLgDate,.WidgetLgAmount{
     font-weight: 300;
 }
 .WidgetLgButton{
-    padding: 5px 7px;
+    padding: 8px 12px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.WidgetLgButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 .WidgetLgButton.Approved{
-    color: #3bb077;
-    background-color: #e5faf2;
+    background: linear-gradient(90deg, #34d399, #059669);
+    color: white;
+}
+.WidgetLgButton.Approved:hover {
+    background: linear-gradient(90deg, #059669, #34d399);
 }
 .WidgetLgButton.Decline{
-    color: #d95087;
-    background-color: #fff0f1;
+    background: linear-gradient(90deg, #f87171, #b91c1c);
+    color: white;
+}
+.WidgetLgButton.Decline:hover {
+    background: linear-gradient(90deg, #b91c1c, #f87171);
 }
 .WidgetLgButton.Pending{
-    color: #2a7ade;
-    background-color: #ebf1fe;
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+    color: white;
+}
+.WidgetLgButton.Pending:hover {
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
