@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import "./Feature.css"
 import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { useSelector } from 'react-redux';
 const Feature = () => {
+
+    const isDark = useSelector((state)=>state.theme.isDark)
 
         
     return (
-        <div className="feature">
+        <div className={isDark ? 'dark-mode feature' : 'feature'}>
             <div className='FeatureItem'>
                 <span className='Featuretitle'>درآمد</span>
                 <div className='FeatureContainer'>

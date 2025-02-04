@@ -3,11 +3,19 @@ import "./Topbar.css";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
+import ContrastIcon from '@mui/icons-material/Contrast';
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../../redux/themeSlice";
 
 export default function Topbar() {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [badgeCount, setBadgeCount] = useState(2);
   const [dismissedNotifications, setDismissedNotifications] = useState([]);
+  const isDark = useSelector((state)=>state.theme.isDark)
+  const dispatch = useDispatch()
+  const handleToggle = ()=>{
+      dispatch(toggleTheme())
+  }
 
   const notifications = [
     { id: 1, message: "شما در حال مشاهده نمونه کار علیرضا دیانت هستید" },
@@ -49,12 +57,16 @@ export default function Topbar() {
   }, [isNotificationOpen]);
 
   return (
-    <div className="topbar">
+    <div className= {isDark ? 'dark-mode topbar' : 'topbar'}>
       <div className="topbarWrapper">
         <div className="topLeft">
           <span className="logo">علیرضا دیانت</span>
         </div>
         <div className="topRight">
+          <div className="topbarIconContainer Contrast" onClick={handleToggle}>
+            <ContrastIcon />
+    
+          </div>
           <div
             className="topbarIconContainer notificationIcon"
             onClick={handleNotificationClick}
@@ -85,7 +97,7 @@ export default function Topbar() {
           <div className="notificationList">
             {filteredNotifications.map((notification) => (
               <div key={notification.id} className="notificationItem">
-                <span>{notification.message}</span>
+                <span className="NotificationsMessage">{notification.message}</span>
                 <button
                   className="dismissButton"
                   onClick={() => handleDismiss(notification.id)}

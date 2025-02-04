@@ -10,11 +10,16 @@
 }
 
 .feedback-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* وسط‌چین افقی */
+  justify-content: center; /* وسط‌چین عمودی */
+  text-align: center; /* وسط‌چین محتوا */
   width: 100%;
   max-width: 600px;
   padding: 20px;
   margin-bottom: 30px;
-  background-color: #f4f4f4; /* رنگ تیره‌تر برای باکس کامنت‌ها */
+  background:linear-gradient(to left, #e6f2fa, #f3f7fa) !important;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -26,11 +31,15 @@
 }
 
 .feedback-card {
-  width: 100%;
-  text-align: center;
+  width: 100%; /* عرض کامل درون باکس */
+  max-width: 500px; /* عرض مشخص */
   padding: 20px;
-  background: #f4f4f4; /* رنگ تیره‌تر برای باکس کامنت‌ها */
+  background: #f4f8f8 !important;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* وسط‌چین محتوا */
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -41,16 +50,54 @@
 
 .feedback-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
 
 .feedback-button {
   flex: 1;
+  max-width: 120px;
+  padding: 12px 20px;
   font-weight: bold;
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* دکمه قبلی */
+.previous-button {
+  background: linear-gradient(135deg, #ff3366, #cc0033);
+  color: white !important;
+  border-color: #cc0033;
+  box-shadow: 0px 4px 10px rgba(204, 0, 51, 0.3);
+}
+
+.previous-button:hover {
+  background: linear-gradient(135deg, #cc0033, #990022);
+  box-shadow: 0px 6px 15px rgba(153, 0, 34, 0.4);
+}
+
+/* دکمه بعدی */
+.next-button {
+  background: linear-gradient(135deg, #0077ff, #0055cc);
+  color: white !important;
+  border-color: #0055cc ;
+  box-shadow: 0px 4px 10px rgba(0, 85, 204, 0.3) ;
+}
+
+.next-button:hover {
+  background: linear-gradient(135deg, #0055cc, #0033aa);
+  box-shadow: 0px 6px 15px rgba(0, 51, 170, 0.4);
+}
+
+/* افکت کلیک */
+.feedback-button:active {
+  transform: scale(0.95);
 }
 
 .feedback-button:hover {
@@ -62,12 +109,37 @@
   max-width: 800px;
   padding: 20px;
   border-radius: 16px;
-  background-color: #fff;
+  background: linear-gradient(#e6f2fa, #f3f7fa) !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chari-title{
+  cursor: pointer;
+  color: black;
 }
 
 .chart-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.dark-mode .feedback-user {
+  color: #ffffff;
+}
+.dark-mode .feedback-comment {
+  color: #ffffff;
+}
+.dark-mode .feedback-container {
+  background: rgb(32, 38, 50);
+}
+.dark-mode .feedback-section{
+  background: rgb(38, 45, 58)  !important;
+}
+.dark-mode .feedback-card{
+  background:  rgb(47, 55, 69) !important;
+}
+.dark-mode .chart-section {
+  background: rgb(32, 38, 50) !important;
+}
+.dark-mode .chari-title {
+  color: #ffffff;
 }

@@ -1,7 +1,7 @@
 .sidebar {
   flex: 1;
   height: calc(100vh - 50px);
-  background-color: rgb(251, 251, 255);
+  background-color: var(--sidebar-bg);
   position: sticky;
   top: 50px;
   left: 0;
@@ -19,7 +19,7 @@
 
 .sidebarTitle {
   font-size: 13px;
-  color: rgb(187, 186, 186);
+  color: var(--sidebarTitle);
 }
 
 .sidebarList {
@@ -32,19 +32,19 @@
   align-items: center;
   padding: 10px;
   border-radius: 5px;
-  color: #555;
+  color: var(--white-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .sidebarListItem:hover {
-  background-color: #e3f2fd; /* رنگ هاور */
-  color: #1976d2; /* متن آبی */
+  background-color: var(--sidebar-ListItem-hover); /* رنگ هاور */
+  color: var(--sidebar-ListItem-color-hover); /* متن آبی */
 }
 
 .sidebarListItem.active {
-  background-color: #d3eafa; /* رنگ لینک فعال */
-  color: #1976d2; /* متن آبی */
+  background-color: var(--sidebar-ListItem-hover); /* رنگ لینک فعال */
+  
   font-weight: bold;
 }
 
@@ -53,12 +53,11 @@
   font-size: 20px;
 }
 .sidebarListItem.disabled {
-  color: gray;
   text-decoration: line-through;
   cursor: not-allowed;
 }
 .sidebarListItem.disabled:hover{
-  background-color: rgb(249, 233, 233);
+  background-color: var(--sidebarListItem-disabled-bg-hover);
   color: rgb(206, 47, 47);
 }
 

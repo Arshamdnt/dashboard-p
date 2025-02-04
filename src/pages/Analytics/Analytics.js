@@ -17,6 +17,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import InsightsIcon from '@mui/icons-material/Insights';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import './Analytics.css'; // اضافه کردن فایل CSS
+import { useSelector } from 'react-redux';
 
 const data = [
   { name: 'تیر', sales: 4000, users: 2400, revenue: 2400 },
@@ -31,8 +32,11 @@ const data = [
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF8884', '#83CA38'];
 
 const Analytics = () => {
+
+  const isDark = useSelector((state)=>state.theme.isDark);
+
   return (
-    <Box className="analytics-container">
+    <Box className={isDark ? 'dark-mode analytics-container' : 'analytics-container'}>
       <Typography variant="h4" className="analytics-title">
         داشبورد آنالیز 
       </Typography>
@@ -55,10 +59,10 @@ const Analytics = () => {
               <Box className="kpi-icon" style={{ color: card.color }}>
                 {card.icon}
               </Box>
-              <Typography variant="h6" className="kpi-label">
+              <Typography variant="h6" className="kpi-label kpi-text">
                 {card.label}
               </Typography>
-              <Typography variant="h4" className="kpi-value" style={{ color: card.color }}>
+              <Typography variant="h4" className="kpi-value price-text" style={{ color: card.color }}>
                 {card.value}
               </Typography>
             </Paper>
@@ -67,16 +71,15 @@ const Analytics = () => {
         {/* چارت خطی */}
         <Grid item xs={12} md={8}>
           <Paper elevation={5} className="chart-container">
-            <Typography variant="h6" color="textSecondary" mb={2}>
+            <Typography variant="h6" color="textSecondary" className='Lg-chart-title' mb={2}>
               فروش و کاربران در طول زمان
             </Typography>
-            <ResponsiveContainer width="100%" height={300}>
-              <ComposedChart data={data}>
+            <ResponsiveContainer width="100%" height={300} >
+              <ComposedChart data={data} >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+                <XAxis dataKey="name" stroke={isDark ? '#ffffff' : '#333333'} />
+                <YAxis  stroke={isDark ? '#ffffff' : '#333333'}/>
                 <Tooltip />
-                <Legend />
                 <Area type="monotone" dataKey="revenue" fill="#8884d8" stroke="#8884d8" />
                 <Bar dataKey="sales" barSize={20} fill="#413ea0" />
                 <Line type="monotone" dataKey="users" stroke="#ff7300" />
@@ -87,7 +90,7 @@ const Analytics = () => {
         {/* چارت دایره‌ای */}
         <Grid item xs={12} md={4}>
           <Paper elevation={5} className="chart-container">
-            <Typography variant="h6" color="textSecondary" mb={2}>
+            <Typography variant="h6" color="textSecondary" mb={2} className='sm-chart-title'>
               توزیع کاربران
             </Typography>
             <ResponsiveContainer width="100%" height={300}>

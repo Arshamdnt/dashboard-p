@@ -41,6 +41,7 @@
     margin-right: 20px;
 }
 .productName{
+    margin-right: 5px;
     font-weight: 600;
 }
 .productInfoButtom{
@@ -109,4 +110,39 @@
     font-weight: 600;
     cursor: pointer;
     background-color: rgb(12, 12, 192);
+}
+.productTitle{
+    cursor: pointer;
+}
+.productTitle:hover{
+    color: #1976d2;
+}
+.dark-mode .productTitle  {
+    color: #ffffff;
+}
+.dark-mode .productTitle:hover {
+    color: rgb(225, 237, 158);
+}
+.dark-mode .productName {
+    color: #ffffff;
+}
+.dark-mode .productInfoKey{
+    color: #ffffff;
+}
+.dark-mode .productInfoValue{
+    color: #ffffff;
+}
+.dark-mode .productInput {
+    background-color: rgb(19, 26, 36);
+}
+
+.dark-mode #inStock {
+    color: #ffffff;
+    background-color: rgb(19, 26, 36);
+}
+.dark-mode .option {
+    color: rgb(255, 255, 255);
+}
+.dark-mode .textInInput {
+    color: rgb(255, 255, 255);
 }

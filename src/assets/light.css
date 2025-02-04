@@ -1,0 +1,15 @@
+:root {
+    --custom-hover: #1565c0 ;
+    --topbar-bg: rgba(255, 255, 255, 0.95);
+    --sidebarListItem: #555;
+    --sidebar-ListItem-hover: #e3f2fd;
+    --sidebar-ListItem-color-hover: #1976d2;
+    --sidebarListItem-disabled-bg-hover: rgb(249, 233, 233);
+    --widgetSm-bg :linear-gradient(145deg, #f9fafa, #f1faf8);
+    --widgetSm-ListItem-hover : linear-gradient(90deg, #f0f4f8, #e0e7ff);
+    --notification-Box : white ;
+    --notification-Item : #f5f5f5 ;
+    --notification-Item-hover :#e0e0e0;
+    --social-links-container-bg: linear-gradient(to right, #e3eff7, rgb(243, 237, 242)) ;
+    --analytics-container-bg : linear-gradient(to right, #f3faff, rgb(242, 240, 243));
+}

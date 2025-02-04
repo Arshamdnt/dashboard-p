@@ -4,5 +4,10 @@
     box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
 }
 .chartTitle{
+    cursor: pointer;
+    color: var(--white-color);
     margin-bottom: 18px;
+}
+.chartTitle:hover{
+    color: var(--custom-hover);
 }

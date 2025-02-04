@@ -2,13 +2,13 @@
 .widgetSm {
     flex: 1;
     padding: 25px;
-    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    background: var(--container-bg);
     border-radius: 15px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
     margin-left: 10px;
     transition: all 0.3s ease;
 }
-
+ 
 .widgetSm:hover {
     transform: translateY(-5px);
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
@@ -18,13 +18,14 @@
 .widgetSmTitle {
     font-size: 24px;
     font-weight: bold;
-    color: #1f2937;
+    color: var(--white-color);
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* لیست */
 .widgetSmList {
+   
     margin: 0;
     padding: 0;
     list-style: none;
@@ -32,25 +33,27 @@
 
 /* آیتم‌های لیست */
 .widgetSmListItem {
+    background-color: var(--widgetSm-List-Item);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
     padding: 15px;
-    background: linear-gradient(90deg, #ffffff, #f9f9f9);
+    background-color: var();
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
 .widgetSmListItem:hover {
-    background: linear-gradient(90deg, #f0f4f8, #e0e7ff);
+    background: var(--grey-hover);
     transform: translateY(-3px);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* تصویر کاربر */
 .widgetSmImg {
+    cursor: pointer;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -69,15 +72,16 @@
     align-items: center;
 }
 
-.widgetSmUser {
+.widgetSmUser {cursor: pointer;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
 }
 
 .widgetSmUsername {
+    cursor: pointer;
     font-weight: 600;
-    color: #111827;
+    color:var(--white-color);
     font-size: 16px;
 }
 

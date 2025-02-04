@@ -3,12 +3,13 @@ import { Box, Typography, Grid, Card, CardContent, Tabs, Tab } from "@mui/materi
 import { Line, Pie } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Title, Tooltip, Legend } from "chart.js";
 import "./Reports.css";
+import { useSelector } from "react-redux";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Title, Tooltip, Legend);
 
 const UserInteractionReport = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+const isDark = useSelector((state)=>state.theme.isDark)
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
@@ -29,6 +30,7 @@ const UserInteractionReport = () => {
       },
     ],
   };
+  
 
   const dailyData = {
     labels: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
@@ -68,7 +70,7 @@ const UserInteractionReport = () => {
   };
 
   return (
-    <Box className="reports-container">
+    <Box className={isDark ? 'dark-mode reports-container' : 'reports-container'}>
       <Typography variant="h4" gutterBottom className="reports-title">
         گزارش تعامل کاربران
       </Typography>

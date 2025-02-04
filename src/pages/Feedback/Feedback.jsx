@@ -18,6 +18,7 @@ import {
 } from "recharts";
 import "./FeedbackComponent.css";
 import { feedbacks } from "../../datas";
+import { useSelector } from "react-redux";
 
 const FeedbackComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,8 +41,10 @@ const FeedbackComponent = () => {
     محبوبیت: feedback.rating * 20, // محبوبیت به درصد (rating * 20)
   }));
 
+   const isDark = useSelector((state)=>state.theme.isDark)
+
   return (
-    <div className="feedback-container">
+    <div className={isDark ? 'dark-mode feedback-container' : 'feedback-container'}>
       <Paper elevation={4} className="feedback-section">
         {/* بخش نظرات */}
         <Card className="feedback-card">
@@ -51,7 +54,6 @@ const FeedbackComponent = () => {
             </Typography>
             <Typography
               variant="body1"
-              color="text.secondary"
               className="feedback-comment"
             >
               {feedbacks[currentIndex].comment}
@@ -70,7 +72,7 @@ const FeedbackComponent = () => {
             variant="outlined"
             color="primary"
             onClick={handlePrevious}
-            className="feedback-button"
+            className="feedback-button previous-button"
           >
             قبلی
           </Button>
@@ -78,7 +80,7 @@ const FeedbackComponent = () => {
             variant="outlined"
             color="secondary"
             onClick={handleNext}
-            className="feedback-button"
+            className="feedback-button next-button"
           >
             بعدی
           </Button>
@@ -87,7 +89,7 @@ const FeedbackComponent = () => {
 
       {/* بخش نمودار */}
       <Paper elevation={4} className="chart-section">
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography variant="h6" align="center" gutterBottom className="chari-title">
           میزان محبوبیت سایت
         </Typography>
         <ResponsiveContainer width="100%" height={300}>
@@ -96,8 +98,8 @@ const FeedbackComponent = () => {
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
+            <XAxis dataKey="name" stroke={isDark ? '#ffffff' : '#333333'} />
+            <YAxis stroke={isDark ? '#ffffff' : '#333333'}/>
             <Tooltip />
             <Bar dataKey="محبوبیت" fill="#5c67f2" radius={[10, 10, 0, 0]} />
           </BarChart>

@@ -1,19 +1,21 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { userRows } from '../../datas';
 import './UserList.css';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router-dom';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import { useSelector } from 'react-redux';
 
-export default function لیستکاربران() {
-  const [داده‌هایکاربر, setداده‌هایکاربر] = useState(userRows);
+export default function UserList() {
+  const [usersData, setUsersData] = useState(userRows);
 
-  const حذفکاربر = (شناسهکاربر) => {
-    setداده‌هایکاربر(داده‌هایکاربر.filter((user) => user.id !== شناسهکاربر));
+  const handleDeleteUser = (userId) => {
+    setUsersData(usersData.filter((user) => user.id !== userId));
   };
 
-  const ستون‌ها = [
+  const isDark = useSelector((state)=>state.theme.isDark)
+
+  const columns = [
     {
       field: 'id',
       headerName: 'شناسه',
@@ -56,12 +58,12 @@ export default function لیستکاربران() {
       renderCell: (params) => {
         return (
           <>
-            <Link className="Link">
+            <Link className="link">
               <button className="userListEdit">ویرایش</button>
             </Link>
             <DeleteOutlinedIcon
               className="userListDelete"
-              onClick={() => حذفکاربر(params.row.id)}
+              onClick={() => handleDeleteUser(params.row.id)}
             />
           </>
         );
@@ -70,10 +72,10 @@ export default function لیستکاربران() {
   ];
 
   return (
-    <div className="userList">
+    <div className={isDark ? 'dark-mode userList' : 'userList'}>
       <DataGrid
-        rows={داده‌هایکاربر}
-        columns={ستون‌ها}
+        rows={usersData}
+        columns={columns}
         pageSize={6}
         disableSelectionOnClick
       />

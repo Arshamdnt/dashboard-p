@@ -5,23 +5,27 @@
   }
   
   .reports-title {
+    cursor: pointer;
     font-weight: bold;
     color: #333;
     font-size: 28px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
+  }
+  .reports-title:hover{
+    color: #1976d2;
   }
   
   .card {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 150px; /* Fixed height for cards */
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(135deg, #1d6e85, #0072ff) !important; /* گرادیانت زیبا */
+    background: linear-gradient(135deg, #1d6e85, #0072ff) !important; 
   }
   .card-title {
     font-size: 18px;
@@ -43,7 +47,7 @@
   .chart-card {
     margin-top: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
   }
   
   .tabs {
@@ -53,16 +57,16 @@
   .MuiTab-root {
     font-size: 16px;
     font-weight: 600;
-    color: #666;
+    color: #666 !important;
     transition: color 0.3s;
   }
   
   .MuiTab-root.Mui-selected {
-    color: #2196f3;
+    color: #1976d2 !important;
   }
   
   .MuiTabs-indicator {
-    background-color: #008cff;
+    background-color: #026785 !important;
   }
   
   .chart-container {
@@ -70,6 +74,7 @@
   }
   
   .charts-container {
+    
     margin-top: 30px;
   }
   
@@ -91,4 +96,35 @@
       font-size: 14px;
     }
   }
+
+  .dark-mode .reports-container{
+    background-color:  rgb(32, 38, 50);
+  } 
+  .dark-mode .reports-title {
+    color: #ffffff;
+  }
+  .dark-mode .reports-title:hover{
+    color: rgb(225, 237, 158);
+  }
+  .dark-mode .card{
+    background: linear-gradient(235deg, #145162, #002149) !important;
+  } 
+  .dark-mode .chart-card{
+    background-color: rgb(38, 45, 58);
+  }
+  .dark-mode .MuiTab-root{
+    color: white !important;
+  }
+  .dark-mode .MuiTab-root.Mui-selected{
+    color: rgb(225, 237, 158) !important;
+  }
+  .dark-mode .chart-title{
+    color: white;
+  }
+  
+
+  
+
+  
+
   

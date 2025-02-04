@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import Chart from '../../components/chart/Chart';
 import { ProductsData } from '../../datas';
 import PublishIcon from '@mui/icons-material/Publish';
+import { useSelector } from 'react-redux';
 import './Product.css'
 const Product = () => {
+    const isDark = useSelector((state)=>state.theme.isDark);
     return (
-        <div className='product'>
+        <div className={isDark ? 'dark-mode product' : 'product'}>
          <div className='productTitleContainer'>
-            <h1>محصول</h1>
+            <h1 className='productTitle'>محصول</h1>
             <Link to='newProduct'>
             <button className='productAddButton'>ایجاد</button>
             </Link>
@@ -55,18 +57,18 @@ const Product = () => {
             <form className='productForm'>
                 <div className='productFormLeft'>
                     <label>نام محصول</label>
-                    <input type="text" placeholder='Dell Laptop' />
+                    <input type="text" placeholder='Dell Laptop' className='productInput' />
 
                     <label>موجودی</label>
                     <select id="inStock">
-                        <option value="Yes">بله</option>
-                        <option value="No">خیر</option>
+                        <option value="Yes" className='option'>بله</option>
+                        <option value="No" className='option'>خیر</option>
                     </select>
 
                     <label>فعال</label>
                     <select id="inStock">
-                        <option value="Yes">بله</option>
-                        <option value="No">خیر</option>
+                        <option value="Yes" className='option'>بله</option>
+                        <option value="No" className='option'>خیر</option>
                     </select>
                 </div>
 

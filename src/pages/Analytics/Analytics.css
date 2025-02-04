@@ -1,23 +1,29 @@
-/* استایل برای باکس اصلی */
+
 .analytics-container {
     flex: 4;
     padding: 32px;
-    background: linear-gradient(to right, #f3faff, rgb(242, 240, 243));
+    background: var(--analytics-container-bg);
     min-height: 100vh;
   }
   
-  /* عنوان اصلی */
+
   .analytics-title {
-    margin-bottom: 32px;
+    cursor: pointer;
+    margin-bottom: 32px !important;
     text-align: center;
-    color: #1976d2; /* primary color */
+    color: #616365; 
     font-weight: bold;
     font-family: 'Roboto, sans-serif';
     letter-spacing: 0.05em;
   }
+  .analytics-title:hover{
+      color:  #1976d2;
+  }
+
   
-  /* استایل کارت‌های KPI */
+
   .kpi-card {
+    cursor: pointer;
     padding: 24px;
     text-align: center;
     border-radius: 12px;
@@ -43,14 +49,65 @@
     font-weight: bold;
   }
   
-  /* چارت‌های اصلی */
+
   .chart-container {
     padding: 24px;
     border-radius: 12px;
     background-color: #fff;
+    
+  }
+  .Lg-chart-title{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  .sm-chart-title{
+      cursor: pointer;
   }
   
+  .Lg-chart-title:hover{
+      color: #1976d2;
+  }
+  .sm-chart-title:hover{
+    color: #1976d2;
+}
   .chart-container:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
-  
+  .dark-mode .sm-chart-title {
+    color: #ffffff;
+  }
+  .dark-mode .Lg-chart-title{
+    color: #ffffff;
+  }
+  .dark-mode .Lg-chart-title:hover{
+    color: rgb(225, 237, 158);
+  }
+  .dark-mode .sm-chart-title:hover{
+    color: rgb(225, 237, 158);
+  }
+
+  .dark-mode .chart-container {
+    background-color: rgb(32, 38, 50);
+  }
+
+  .dark-mode .analytics-title  {
+    color: #ffffff ;
+  }
+  .dark-mode .analytics-title:hover{
+    color: rgb(225, 237, 158);
+}
+
+.kpi-text {
+  color: #333;
+  font-weight: bold;
+}
+
+.price-text {
+  font-size: 22px;
+  font-weight: bold;
+  direction: ltr;
+}
+.dark-mode .kpi-text{
+  color: #ffffff;
+}
+

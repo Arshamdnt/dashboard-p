@@ -2,10 +2,14 @@ import React from 'react';
 import './widgetSm.css';
 import { newUser } from '../../datas'; 
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useSelector } from 'react-redux';
 
 const WidgetSm = () => {
+
+    const isDark = useSelector((state)=>state.theme.isDark)
+
     return (
-        <div className="widgetSm">
+        <div className={isDark ? 'dark-mode widgetSm' : 'widgetSm'}>
             <span className="widgetSmTitle">کاربران جدید</span>
             <ul className="widgetSmList">
                 {newUser.map((user) => (

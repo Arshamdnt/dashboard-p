@@ -1,0 +1,27 @@
+.dark-mode {
+    --white-color: #ffffff;
+    --custom-hover: rgb(225, 237, 158);
+    --grey-hover : #575e6358;
+    --topbar-bg: rgb(41, 48, 64);
+    --container-bg: rgb(32, 38, 50);
+
+    --sidebar-bg: rgb(36, 43, 59);
+    --sidebarTitle: #ffffff98;
+    --sidebar-ListItem-color-hover: rgb(225, 237, 158);
+    --sidebar-ListItem-hover : #575e6358;
+    --sidebarListItem-disabled-bg-hover: rgba(55, 1, 1, 0.185);
+
+    --featureSub : #f7f4d3;
+    --widgetSm-List-Item : #1a1f2a;
+
+    --notification-Box : rgb(41, 48, 64);
+    --notification-Item : #1a1f2a;
+    --notification-Item-hover: #575e6358;
+
+    --social-links-container-bg: rgb(32, 38, 50);
+
+    --analytics-container-bg : rgb(32, 38, 50) ;
+
+
+    
+}

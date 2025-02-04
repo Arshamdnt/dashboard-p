@@ -4,6 +4,7 @@
     box-shadow: 0px 0px 15px -8px rgb(0, 0, 0,0.75);
 }
 .WidgetLgTitle{
+    color: var(--white-color);
     font-size: 22px;
     font-weight: 600;
 }
@@ -12,6 +13,7 @@
     border-spacing: 20px;
 }
 .WidgetLgTh{
+    color: var(--white-color);
     text-align: right;
 }
 
@@ -27,7 +29,11 @@
     margin-left: 10px;
     border: 2px solid #2563eb;
 }
+.WidgetLgName{
+    color: var(--white-color);
+}
 .WidgetLgDate,.WidgetLgAmount{
+    color: var(--white-color);
     font-weight: 300;
 }
 .WidgetLgButton{

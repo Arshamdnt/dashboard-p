@@ -25,11 +25,44 @@
     cursor: pointer;
 }
 .userListDelete{
-    color: red;
     cursor: pointer;
-    vertical-align: -6px
+    vertical-align: -6px;
 }
-.MuiDataGrid-cell{
-    text-align: right !important;
-   
+
+.dark-mode {
+    
 }
+
+.dark-mode .MuiDataGrid-root {
+    background-color: rgb(32, 38, 50);
+    color: white;
+    border-color: #333;
+}
+
+.dark-mode .MuiDataGrid-columnHeaders {
+    background-color: rgb(32, 38, 50) !important; 
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .MuiDataGrid-cell {
+    background-color:  rgb(32, 38, 50);
+    color: white;
+}
+
+.dark-mode .userListImg {
+    border-color: rgb(225, 237, 158); 
+}
+
+.dark-mode .userListEdit {
+    background-color: #ff9800;
+}
+
+
+ 
+
+
+
+
+
+
+

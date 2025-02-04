@@ -1,52 +1,105 @@
-.feature{
-    
+.feature {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.FeatureItem{
+.FeatureItem {
     flex: 1;
     margin: 5px 20px;
     padding: 30px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    
-    box-shadow: 0 0 15px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-.Featuretitle{
+.FeatureItem::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #f3ddf3, #efcde5, #c0e1e1, #eac7ea);
+    background-size: 300% 300%;
+    animation: borderAnimation 4s infinite linear;
+    z-index: -1;
+    border-radius: 12px;
+}
+
+@keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.Featuretitle {
+    color: var(--white-color);
     font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
 }
 
-.FeatureContainer{
+.Featuretitle:hover {
+    color: var(--custom-hover);
+}
+
+.FeatureContainer {
     display: flex;
     align-items: center;
     margin: 10px 0px;
 }
 
-.FeatureMoney{
+.FeatureMoney {
+    color: var(--white-color);
     font-size: 30px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
-.FeatureRate{
+
+.FeatureMoney:hover {
+    color: var(--custom-hover);
+}
+
+.FeatureRate {
+    color: var(--white-color);
     display: flex;
     align-items: center;
     margin-right: 14px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-.featureIcon{
+.FeatureRate:hover {
+    color: var(--custom-hover);
+}
+
+.featureIcon {
     font-size: 30px;
     margin-left: 5px;
     color: rgb(0, 161, 21);
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.FeatureItem:hover .featureIcon {
+    transform: scale(1.1);
 }
 
 .featureIcon.Negative {
     color: red;
 }
 
-.featureSub{
+.featureSub {
     font-size: 15px;
-    color: gray;
+    color: var(--featureSub);
+    font-style: italic;
+    transition: color 0.3s ease-in-out;
+}
+
+.featureSub:hover {
+    color: var(--custom-hover);
 }

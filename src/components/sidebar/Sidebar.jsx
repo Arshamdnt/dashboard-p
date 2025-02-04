@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
@@ -9,16 +11,17 @@ import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-
 import "./Sidebar.css";
 
 export default function Sidebar() {
+
+   const isDark = useSelector((state)=>state.theme.isDark)
   const location = useLocation(); // شناسایی مسیر فعلی
 
   const isActive = (path) => location.pathname === path; // بررسی اینکه مسیر فعلی با مسیر لینک یکسان است
 
   return (
-    <div className="sidebar">
+    <div className={isDark ? 'dark-mode sidebar' : 'sidebar'}>
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">داشبورد</h3>
