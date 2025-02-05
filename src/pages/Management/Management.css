@@ -29,7 +29,7 @@
   
   .chart-container {
     flex: 2;
-    background-color: #fff;
+    background-color: #e7e9f3;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -139,4 +139,26 @@
       padding: 20px;
     }
   }
+  .dark-mode .management-container {
+    background: rgb(29, 34, 45);
+  }
+
+  .dark-mode .section-title {
+    color: white;
+  }
+  .dark-mode .chart-container {
+    background-color: rgb(29, 34, 46);
+    color: white;
+  }
+  .dark-mode .info-container {
+    background-color: rgb(29, 34, 46);
+    
+  }
+
+  .dark-mode .info-container h3 {
+      color: white;
+  }
   
+  .dark-mode .info-container p {
+      color: rgb(255, 255, 255);
+  }

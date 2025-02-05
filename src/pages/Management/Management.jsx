@@ -1,6 +1,7 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import './Management.css';  // وارد کردن استایل‌های جدید
+import { useSelector } from 'react-redux';
 
 // داده‌های نمونه برای نمودار RadarChart
 const data = [
@@ -11,9 +12,13 @@ const data = [
   { subject: 'تعداد سفارشات', A: 110, fullMark: 150 },
 ];
 
+
 const Management = () => {
+
+  const isDark = useSelector((state)=>state.theme.isDark);
+
   return (
-    <div className="management-container">
+    <div className={isDark ? 'dark-mode management-container' : 'management-container'}>
       <h2 className="section-title">مدیریت سایت</h2>
 
       {/* بخش نمودار و اطلاعات */}
