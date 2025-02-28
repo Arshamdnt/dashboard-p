@@ -37,6 +37,18 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">منوی سریع</h3>
           <ul className="sidebarList">
+
+          <Link to="/Analytics" className="link">
+              <li
+                className={`sidebarListItem ${
+                  isActive("/Analytics") ? "active" : ""
+                }`}
+              >
+                <TimelineIcon className="sidebarIcon" />
+                آنالیز
+              </li>
+            </Link>
+
             <Link to="/users" className="link">
               <li
                 className={`sidebarListItem ${
@@ -59,16 +71,7 @@ export default function Sidebar() {
               </li>
             </Link>
 
-            <Link to="/Analytics" className="link">
-              <li
-                className={`sidebarListItem ${
-                  isActive("/Analytics") ? "active" : ""
-                }`}
-              >
-                <TimelineIcon className="sidebarIcon" />
-                آنالیز
-              </li>
-            </Link>
+            
 
             <li className="sidebarListItem disabled">
               <AttachMoneyIcon className="sidebarIcon" />

@@ -103,3 +103,15 @@
 .featureSub:hover {
     color: var(--custom-hover);
 }
+@media (max-width: 768px) {
+    .feature {
+    width: 13.81rem;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .FeatureItem {
+      margin: 10px 0;
+      width: 90%;
+    }
+  }
