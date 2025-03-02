@@ -71,3 +71,23 @@
 .WidgetLgButton.Pending:hover {
     background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
+
+
+@media (max-width: 768px) {
+    .WidgetLg {
+      padding: 10px;
+      overflow-x: auto; /* برای نمایش درست جدول */
+      width: 60%;
+       
+      translate: 95px;
+    }
+    
+    .WidgetLgLgTable {
+      width: 100%;
+      font-size: 14px;
+    }
+    
+    .WidgetLgTh, .WidgetLgName, .WidgetLgDate, .WidgetLgAmount {
+      font-size: 12px;
+    }
+  }

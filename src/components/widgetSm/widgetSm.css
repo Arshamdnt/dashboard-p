@@ -115,6 +115,33 @@
 }
 
 .widgetSmIcon {
-    font-size: 18px;
-    margin-right: 5px;
+    font-size: 18px !important;
+    margin-left: 5px !important;
 }
+
+@media (max-width: 768px) {
+    .widgetSm {
+        width: 60%;
+       
+        translate: 95px;
+        padding: 15px;
+    }
+    .widgetSmButton {
+        
+        font-size: 11px;
+    }
+    .widgetSmIcon {
+        font-size: 13px !important;
+        margin-left: 4px !important;
+    }
+    .widgetSmUsername{
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .widgetSmImg{
+        width: 44px;
+        height: 44px;
+    }
+  }
+
+  

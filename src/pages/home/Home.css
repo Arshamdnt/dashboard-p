@@ -1,9 +1,20 @@
-.home{
-
+.home {
   flex: 4;
+  padding: 20px;
 }
-.homeWidgets{
-  
+
+.homeWidgets {
   display: flex;
+  flex-wrap: wrap; /* اجازه‌ی شکستن ردیف به چند سطر */
+  gap: 20px;      /* فاصله بین ویجت‌ها */
   margin: 21px;
+}
+
+/* در نمایش‌های موبایل المان‌ها را به صورت ستونی نمایش بده */
+@media (max-width: 768px) {
+  .homeWidgets {
+    flex-direction: column;
+    align-items: center;
+    
+  }
 }
