@@ -101,7 +101,7 @@ let Transactions = [
     img : process.env.PUBLIC_URL + '/images/customer6.jpg'},
 ]
 
-let userRows = [
+let userRows  = [
     {
     id : 1 ,
     username : 'Sahar Azizi',

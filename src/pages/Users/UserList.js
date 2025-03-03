@@ -1,84 +1,102 @@
 import React, { useState } from 'react';
-import { userRows } from '../../datas';
-import './UserList.css';
-import { DataGrid } from '@mui/x-data-grid';
-import { Link } from 'react-router-dom';
+import { 
+  Container, 
+  Box, 
+  Grid, 
+  Card, 
+  CardMedia, 
+  CardContent, 
+  CardActions, 
+  Typography, 
+  IconButton, 
+  TextField, 
+  Fade 
+} from '@mui/material';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { userRows } from '../../datas';
+import './UserList.css'
 
-export default function UserList() {
-  const [usersData, setUsersData] = useState(userRows);
+export default function UserCardList() {
+  const [users, setUsers] = useState(userRows || []);
+  const [search, setSearch] = useState('');
+  const isDark = useSelector((state) => state.theme.isDark);
 
   const handleDeleteUser = (userId) => {
-    setUsersData(usersData.filter((user) => user.id !== userId));
+    setUsers(users.filter((user) => user.id !== userId));
   };
 
-  const isDark = useSelector((state)=>state.theme.isDark)
-
-  const columns = [
-    {
-      field: 'id',
-      headerName: 'شناسه',
-      width: 90,
-    },
-    {
-      field: 'user',
-      headerName: 'کاربر',
-      width: 200,
-      renderCell: (params) => {
-        return (
-          <Link to="/" className="link">
-            <div className="userListUser">
-              <img src={params.row.avatar} alt="" className="userListImg" />
-              {params.row.username}
-            </div>
-          </Link>
-        );
-      },
-    },
-    {
-      field: 'email',
-      headerName: 'ایمیل',
-      width: 200,
-    },
-    {
-      field: 'status',
-      headerName: 'وضعیت',
-      width: 120,
-    },
-    {
-      field: 'transaction',
-      headerName: 'معامله',
-      width: 160,
-    },
-    {
-      field: 'action',
-      headerName: 'عملیات',
-      width: 150,
-      renderCell: (params) => {
-        return (
-          <>
-            <Link className="link">
-              <button className="userListEdit">ویرایش</button>
-            </Link>
-            <DeleteOutlinedIcon
-              className="userListDelete"
-              onClick={() => handleDeleteUser(params.row.id)}
-            />
-          </>
-        );
-      },
-    },
-  ];
+  const filteredUsers = users.filter((user) =>
+    user.username.toLowerCase().includes(search.toLowerCase()) ||
+    user.email.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <div className={isDark ? 'dark-mode userList' : 'userList'}>
-      <DataGrid
-        rows={usersData}
-        columns={columns}
-        pageSize={6}
-        disableSelectionOnClick
-      />
-    </div>
+    <Container className={`user-list-container ${isDark ? 'dark-mode' : ''}`}>
+      <Typography 
+        variant="h4" 
+        align="center" 
+        gutterBottom 
+        className="user-list-title"
+      >
+        لیست کاربران
+      </Typography>
+      <Box className="search-box">
+        <TextField
+          variant="outlined"
+          placeholder="جستجو کاربر..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className={`search-field ${isDark ? 'dark-mode' : ''}`}
+        />
+      </Box>
+      <Grid container spacing={3}>
+        {filteredUsers.map((user) => (
+          <Grid item key={user.id} xs={12} sm={6} md={4}>
+            <Fade in timeout={500}>
+              <Card className={`user-card ${isDark ? 'dark-mode' : ''}`}>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={user.avatar}
+                  alt={user.username}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="div">
+                    {user.username}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {user.email}
+                  </Typography>
+                  <Typography variant="body2" className="user-status">
+                    وضعیت: {user.status}
+                  </Typography>
+                  <Typography variant="body2">
+                    خرید : {user.transaction}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <IconButton 
+                    component={Link} 
+                    to={`/user/${user.id}`} 
+                    color="primary"
+                  >
+                    <EditOutlinedIcon />
+                  </IconButton>
+                  <IconButton 
+                    onClick={() => handleDeleteUser(user.id)} 
+                    color="error"
+                  >
+                    <DeleteOutlinedIcon />
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Fade>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 }

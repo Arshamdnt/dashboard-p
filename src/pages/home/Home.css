@@ -12,6 +12,7 @@
 
 /* در نمایش‌های موبایل المان‌ها را به صورت ستونی نمایش بده */
 @media (max-width: 768px) {
+
   .homeWidgets {
     flex-direction: column;
     align-items: center;
