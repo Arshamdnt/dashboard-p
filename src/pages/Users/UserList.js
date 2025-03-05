@@ -32,9 +32,11 @@ export default function UserCardList() {
     user.username.toLowerCase().includes(search.toLowerCase()) ||
     user.email.toLowerCase().includes(search.toLowerCase())
   );
+  
+
 
   return (
-    <Container className={`user-list-container ${isDark ? 'dark-mode' : ''}`}>
+    <Container className={isDark ? 'dark-mode user-list-container' : 'user-list-container'}>
       <Typography 
         variant="h4" 
         align="center" 
@@ -64,16 +66,16 @@ export default function UserCardList() {
                   alt={user.username}
                 />
                 <CardContent>
-                  <Typography variant="h6" component="div">
+                  <Typography variant="h6" component="div" className='user-username'>
                     {user.username}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" className='user-email'>
                     {user.email}
                   </Typography>
                   <Typography variant="body2" className="user-status">
                     وضعیت: {user.status}
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body2" className='user-transaction'>
                     خرید : {user.transaction}
                   </Typography>
                 </CardContent>

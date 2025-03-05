@@ -60,13 +60,11 @@ export default function Sidebar() {
               </li>
             </Link>
 
-            <Link to="/products" className="link">
+            <Link className="link">
               <li
-                className={`sidebarListItem ${
-                  isActive("/products") ? "active" : ""
-                }`}
+                className="sidebarListItem  disabled"
               >
-                <StorefrontIcon className="sidebarIcon" />
+                <StorefrontIcon className="sidebarIcon " />
                 محصولات
               </li>
             </Link>

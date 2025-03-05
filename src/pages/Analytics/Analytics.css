@@ -7,6 +7,18 @@
   }
   
 
+  @media (max-width: 768px) {
+
+    .Analytics-chart{
+      display: none;
+    }
+
+    .chart-container {
+          width: 200px;
+    }
+  }
+   
+
   .analytics-title {
     cursor: pointer;
     margin-bottom: 32px !important;

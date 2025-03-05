@@ -70,7 +70,7 @@ const Analytics = () => {
         ))}
         {/* چارت خطی */}
         <Grid item xs={12} md={8}>
-          <Paper elevation={5} className="chart-container">
+          <Paper elevation={5} className="chart-container Analytics-chart">
             <Typography variant="h6" color="textSecondary" className='Lg-chart-title' mb={2}>
               فروش و کاربران در طول زمان
             </Typography>

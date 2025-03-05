@@ -1,0 +1,85 @@
+/* Wrapper اصلی جدول */
+.userList {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    width: 100%;
+    margin: 20px auto;
+    direction: rtl; /* جهت راست به چپ */
+  }
+  
+  /* سفارشی سازی کلی جدول DataGrid */
+  .MuiDataGrid-root {
+    background: #ffffff;
+    font-family: 'Vazir', sans-serif; /* استفاده از فونت مناسب فارسی */
+  }
+  
+  /* سفارشی سازی سربرگ جدول */
+  .MuiDataGrid-columnHeaders {
+    background-color: #3f51b5; /* پس‌زمینه آبی تیره */
+    color: #ffffff;           /* متن سفید برای کنتراست بالا */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* اطمینان از نمایش درست عنوان‌های ستون */
+  .MuiDataGrid-columnHeaderTitle {
+    color: #ffffff;
+  }
+  
+  /* استایل ردیف‌های جدول */
+  .MuiDataGrid-cell {
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  /* استایل اختصاصی دکمه ویرایش */
+  .userListEdit {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background 0.3s;
+  }
+  
+  .userListEdit:hover {
+    background-color: #43a047;
+  }
+  
+  /* استایل آیکون حذف */
+  .userListDelete {
+    color: #f44336;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .userListDelete:hover {
+    transform: scale(1.1);
+  }
+  
+  /* استایل لینک‌ها برای حذف خط زیر و حفظ رنگ */
+  .link,
+  .Link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* استایل بخش نمایش کاربر در ستون نام محصول */
+  .userListUser {
+    display: flex;
+    align-items: center;
+  }
+  
+  .userListImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  

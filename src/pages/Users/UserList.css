@@ -12,3 +12,21 @@
     margin-bottom:12px;
 }
 
+.dark-mode .user-list-title {
+    color: white ;
+    
+}
+
+.dark-mode .search-field input::placeholder {
+    color: #ffffff; /* رنگ مورد نظر شما */
+  }
+
+  .dark-mode .user-card {
+    background-color:rgb(32, 38, 50);
+  }
+  .dark-mode .user-username,
+  .dark-mode .user-email,
+  .dark-mode .user-status,
+  .dark-mode .user-transaction {
+    color: white !important;
+  }
