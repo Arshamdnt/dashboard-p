@@ -7,9 +7,11 @@ body {
   margin: 0;
 }
 .container {
+  width: 100%;
   display: flex;
   background-color: var(--container-bg);
 }
+
 
 .link {
   text-decoration: none;

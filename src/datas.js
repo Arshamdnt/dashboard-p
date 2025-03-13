@@ -55,6 +55,82 @@ let newUser = [
     {id : 3 , userName : 'Arash Rezavand' , title : 'backend developer ', img : process.env.PUBLIC_URL + '/images/newuser3.jpg' },
     {id : 4 , userName : 'Mohsen Bahmani' , title : 'Hacker', img : process.env.PUBLIC_URL + '/images/newuser4.jpg' }
 ];
+const publicUrl = process.env.PUBLIC_URL || ""; 
+let userRows  = [
+  {
+  id : 1 ,
+  username : 'Sahar Azizi',
+  avatar: `${publicUrl}/images/users4.jpg`,
+  status : 'فعال',
+  transaction : "$140",
+  email : 'Sahar@gmail.com'
+},
+  {
+  id : 2 ,
+  username : 'Aref Aghasi',
+  avatar: `${publicUrl}/images/users.jpg`,
+  status : 'غیر فعال',
+  transaction : "$120",
+  email : 'Aref@gmail.com'
+},
+  {
+  id : 3 ,
+  username : 'Mehdi hoseinzadeh',
+  avatar: `${publicUrl}/images/users2.jpg`,
+  status : 'فعال',
+  transaction : "$79.5",
+  email : 'Mehdi@gmail.com'
+},
+  {
+  id : 4 ,
+  username : 'Negar Alipour',
+  avatar: `${publicUrl}/images/users5.jpg`,
+  status : 'فعال',
+  transaction : "$108",
+  email : 'Negar@gmail.com'
+},
+  {
+  id : 5 ,
+  username : 'Radin Falah',
+  avatar: `${publicUrl}/images/users3.jpg`,
+  status : 'فعال',
+  transaction : "$55.78",
+  email : 'Radin@gmail.com'
+},
+  {
+  id : 6 ,
+  username : 'Armin Ghafouri',
+  avatar: `${publicUrl}/images/user6.jpg`,
+  status : 'غیر فعال',
+  transaction : "$122.19",
+  email : 'Armin@gmail.com'
+},
+  {
+  id : 7 ,
+  username : 'Mobina Nezamdoost',
+  avatar: `${publicUrl}/images/user7.jpg`,
+  status : 'فعال',
+  transaction : "$64.5",
+  email : 'Mobina@gmail.com'
+},
+  {
+  id : 8 ,
+  username : 'Zahra Lotfi',
+  avatar: `${publicUrl}/images/user8.jpg`,
+  status : 'فعال',
+  transaction : "$53",
+  email : 'Zahra@gmail.com'
+},
+  {
+  id : 9 ,
+  username : 'Farhad jamali',
+  avatar: `${publicUrl}/images/user9.jpg`,
+  status : 'فعال',
+  transaction : "$77",
+  email : 'farhad@gmail.com'
+},
+];
+
 
 let Transactions = [
     {
@@ -100,82 +176,6 @@ let Transactions = [
     status : 'Pending',
     img : process.env.PUBLIC_URL + '/images/customer6.jpg'},
 ]
-
-let userRows  = [
-    {
-    id : 1 ,
-    username : 'Sahar Azizi',
-    avatar: process.env.PUBLIC_URL + '/images/users4.jpg',
-    status : 'فعال',
-    transaction : "$140",
-    email : 'Sahar@gmail.com'
- },
-    {
-    id : 2 ,
-    username : 'Aref Aghasi',
-    avatar: process.env.PUBLIC_URL + '/images/users.jpg',
-    status : 'غیر فعال',
-    transaction : "$120",
-    email : 'Aref@gmail.com'
- },
-    {
-    id : 3 ,
-    username : 'Mehdi hoseinzadeh',
-    avatar: process.env.PUBLIC_URL + '/images/users2.jpg',
-    status : 'فعال',
-    transaction : "$79.5",
-    email : 'Mehdi@gmail.com'
- },
-    {
-    id : 4 ,
-    username : 'Negar Alipour',
-    avatar: process.env.PUBLIC_URL + '/images/users5.jpg',
-    status : 'فعال',
-    transaction : "$108",
-    email : 'Negar@gmail.com'
- },
-    {
-    id : 5 ,
-    username : 'Radin Falah',
-    avatar: process.env.PUBLIC_URL + '/images/users3.jpg',
-    status : 'فعال',
-    transaction : "$55.78",
-    email : 'Radin@gmail.com'
- },
-    {
-    id : 6 ,
-    username : 'Armin Ghafouri',
-    avatar: process.env.PUBLIC_URL + '/images/user6.jpg',
-    status : 'غیر فعال',
-    transaction : "$122.19",
-    email : 'Armin@gmail.com'
- },
-    {
-    id : 7 ,
-    username : 'Mobina Nezamdoost',
-    avatar: process.env.PUBLIC_URL + '/images/user7.jpg',
-    status : 'فعال',
-    transaction : "$64.5",
-    email : 'Mobina@gmail.com'
- },
-    {
-    id : 8 ,
-    username : 'Zahra Lotfi',
-    avatar: process.env.PUBLIC_URL + '/images/user8.jpg',
-    status : 'فعال',
-    transaction : "$53",
-    email : 'Zahra@gmail.com'
- },
-    {
-    id : 9 ,
-    username : 'Farhad jamali',
-    avatar: process.env.PUBLIC_URL + '/images/user9.jpg',
-    status : 'فعال',
-    transaction : "$77",
-    email : 'farhad@gmail.com'
- },
-]
-
 let Products = [
     {
         id : 1,

@@ -1,5 +1,6 @@
 /* استایل برای کامپوننت مدیریت */
 .management-container {
+    width: 100%;
     padding: 40px;
     font-family: 'IRANSans', sans-serif;
     background: linear-gradient(to right, #c1c8e4, #f3faff);

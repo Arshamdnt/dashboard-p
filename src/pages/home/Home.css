@@ -15,6 +15,7 @@
 @media (max-width: 768px) {
 
   .home {
+    
     padding: 10px; /* کاهش padding برای موبایل */
     align-items: center;
   }

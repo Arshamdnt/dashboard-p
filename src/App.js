@@ -5,8 +5,10 @@ import { useSelector } from 'react-redux'
 import Topbar from './components/topbar/Topbar'
 import Sidebar from './components/sidebar/Sidebar'
 import './App.css'
-
+const publicUrl = process.env.PUBLIC_URL || ""; // دریافت مقدار PUBLIC_URL
 export default function App() {
+
+
 
     
     let router = useRoutes(routes)

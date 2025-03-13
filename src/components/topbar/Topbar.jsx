@@ -18,8 +18,8 @@ export default function Topbar() {
   }
 
   const notifications = [
-    { id: 1, message: "شما در حال مشاهده نمونه کار علیرضا دیانت هستید" },
-    { id: 2, message: "امیدوارم مورد قبول باشد" },
+    { id: 1, message: " نوتیفیکشن تستی اول" },
+    { id: 2, message: "نوتیفیکشن تستی دوم" },
   ];
 
 
