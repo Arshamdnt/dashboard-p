@@ -120,27 +120,35 @@
 }
 
 @media (max-width: 768px) {
+
     .widgetSm {
-        width: 60%;
-       
-        translate: 95px;
+        width: 12rem;
         padding: 15px;
+        
     }
     .widgetSmButton {
         
         font-size: 11px;
     }
+    .widgetSmButton {
+        
+        font-size: 10px;
+    }
+    
     .widgetSmIcon {
-        font-size: 13px !important;
+        font-size: 9px !important;
         margin-left: 4px !important;
     }
     .widgetSmUsername{
         margin-left: 5px;
-        font-size: 12px;
+        font-size: 11px;
     }
     .widgetSmImg{
-        width: 44px;
-        height: 44px;
+        width: 33px;
+        height: 33px;
+    }
+    .widgetSmIcon{
+        font-size: 11px !important;
     }
   }
 

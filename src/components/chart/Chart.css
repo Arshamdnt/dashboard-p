@@ -14,14 +14,17 @@
 
 @media (max-width: 768px) {
     .chart {
-      margin-right: -20px;
-      padding: 10px;
-      width: 13.88rem;
-      height: 8rem;
+      /* margin-right: -20px; */
+      background: #262e3d;
+      width: 13rem;
+      padding: 6px;
+      margin: 10px;
+      height: 9.5rem;
+     
     }
     .chartTitle {
       font-size: 16px;
-      margin-bottom: 10px;
+      
     }
    
     .chart > div {

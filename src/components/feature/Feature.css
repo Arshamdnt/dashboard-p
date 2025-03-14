@@ -105,13 +105,17 @@
 }
 @media (max-width: 768px) {
     .feature {
-    width: 12.81rem;
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     }
-    
+    .dark-mode .FeatureItem{
+        background: #262e3d;
+    }
     .FeatureItem {
-      margin: 10px 0;
-      width: 90%;
+        
+        margin: 10px 0;
+        width: 11.2rem;
     }
   }
