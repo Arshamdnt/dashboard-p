@@ -121,6 +121,14 @@
   .dark-mode .chart-title{
     color: white;
   }
+  @media (max-width: 768px) {
+    .chart-card{
+      display: none;
+    }
+    .MuiGrid-container{
+        width: 13.2rem !important;
+    }
+  }
   
 
   

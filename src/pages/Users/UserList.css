@@ -30,3 +30,13 @@
   .dark-mode .user-transaction {
     color: white !important;
   }
+
+  @media (max-width: 768px) {
+    .MuiGrid-container{
+       width: 15rem !important;
+    }
+    .MuiTypography-h4{
+      font-size: 1.2rem !important;
+    }
+    }
+    

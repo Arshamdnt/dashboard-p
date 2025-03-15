@@ -122,4 +122,15 @@
 .dark-mode .kpi-text{
   color: #ffffff;
 }
+@media (max-width: 768px) {
+.chart-container{
+  width: 9rem;
+  
+}
+.analytics-container{
+  margin-right: 20px;
+  padding: 0px;
+}
+
+}
 

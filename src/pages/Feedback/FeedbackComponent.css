@@ -143,3 +143,12 @@
 .dark-mode .chari-title {
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    .feedback-section{
+      width: 11.2rem !important;
+    }
+    .feedback-card {
+      padding: 10px;
+    }
+  }
