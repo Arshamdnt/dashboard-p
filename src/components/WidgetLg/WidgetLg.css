@@ -75,11 +75,11 @@
 
 @media (max-width: 768px) {
     .WidgetLg {
-      padding: 10px;
+      
       overflow-x: auto; /* برای نمایش درست جدول */
-      width: 60%;
+      width: 12.5rem;
        
-      translate: 95px;
+      
     }
     
     .WidgetLgLgTable {
@@ -89,5 +89,8 @@
     
     .WidgetLgTh, .WidgetLgName, .WidgetLgDate, .WidgetLgAmount {
       font-size: 12px;
+    }
+    .WidgetLgButton{
+        font-size: 12px;
     }
   }

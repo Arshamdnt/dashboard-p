@@ -12,7 +12,7 @@ export default function Home() {
             <Chart  title='فروش ماهانه' grid data={xAxisData} dataKey="sale" />
             <div className='homeWidgets'>
               <WidgetSm/>
-              {/* <WidgetLg/> */}
+              <WidgetLg/>
             </div>
     </div>
   )
