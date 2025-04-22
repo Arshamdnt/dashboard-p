@@ -17,7 +17,7 @@ import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { userRows } from '../../datas';
-import './UserList.css'
+import './UserList.css';
 
 export default function UserCardList() {
   const [users, setUsers] = useState(userRows || []);
@@ -32,17 +32,10 @@ export default function UserCardList() {
     user.username.toLowerCase().includes(search.toLowerCase()) ||
     user.email.toLowerCase().includes(search.toLowerCase())
   );
-  
-
 
   return (
     <Container className={isDark ? 'dark-mode user-list-container' : 'user-list-container'}>
-      <Typography 
-        variant="h4" 
-        align="center" 
-        gutterBottom 
-        className="user-list-title"
-      >
+      <Typography variant="h4" align="center" gutterBottom className="user-list-title">
         لیست کاربران
       </Typography>
       <Box className="search-box">
@@ -66,23 +59,23 @@ export default function UserCardList() {
                   alt={user.username}
                 />
                 <CardContent>
-                  <Typography variant="h6" component="div" className='user-username'>
+                  <Typography variant="h6" component="div" className="user-username">
                     {user.username}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary" className='user-email'>
+                  <Typography variant="body2" color="text.secondary" className="user-email">
                     {user.email}
                   </Typography>
                   <Typography variant="body2" className="user-status">
                     وضعیت: {user.status}
                   </Typography>
-                  <Typography variant="body2" className='user-transaction'>
-                    خرید : {user.transaction}
+                  <Typography variant="body2" className="user-transaction">
+                    خرید: {user.transaction}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <IconButton 
                     component={Link} 
-                    to={`/user/${user.id}`} 
+                     
                     color="primary"
                   >
                     <EditOutlinedIcon />

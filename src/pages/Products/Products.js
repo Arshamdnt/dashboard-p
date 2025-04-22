@@ -1,71 +1,86 @@
 import React, { useState } from 'react';
+import { 
+  Container, 
+  Grid, 
+  Card, 
+  CardMedia, 
+  CardContent, 
+  CardActions, 
+  Typography, 
+  IconButton, 
+  TextField, 
+  Fade,
+  Box 
+} from '@mui/material';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import { Link } from 'react-router-dom';
 import { Products } from '../../datas';
 import './Products.css';
-import { DataGrid } from '@mui/x-data-grid';
-import { Link } from 'react-router-dom';
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
-export default function UserLIst() {
-  const [ProductsDatas, setProductsDatas] = useState(Products);
+export default function ProductsList() {
+  const [productsData, setProductsData] = useState(Products);
+  const [search, setSearch] = useState('');
 
-  const ProductsDelete = (ProductID) => {
-    setProductsDatas(ProductsDatas.filter((Product) => Product.id !== ProductID));
+  const handleDeleteProduct = (productID) => {
+    setProductsData(productsData.filter((product) => product.id !== productID));
   };
 
-  const colums = [
-    {
-      field: 'id',
-      headerName: 'شناسه',
-      width: 90,
-    },
-    {
-      field: 'title',
-      headerName: 'نام محصول',
-      width: 200,
-      renderCell: (params) => {
-        return (
-          <Link to='/' className='link'>
-            <div className='userListUser'>
-              <img src={params.row.avatar} alt='' className='userListImg' />
-              {params.row.title}
-            </div>
-          </Link>
-        );
-      },
-    },
-    {
-      field: 'price',
-      headerName: 'قیمت',
-      width: 120,
-    },
-    {
-      field: 'action',
-      headerName: 'عملیات',
-      width: 150,
-      renderCell: (params) => {
-        return (
-          <>
-            <Link to={`product/${params.row.id}`} className='Link'>
-              <button className='userListEdit'>ویرایش</button>
-            </Link>
-            <DeleteOutlinedIcon
-              className='userListDelete'
-              onClick={() => ProductsDelete(params.row.id)}
-            />
-          </>
-        );
-      },
-    },
-  ];
+  const filteredProducts = productsData.filter(product =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div className='userList'>
-      <DataGrid
-        rows={ProductsDatas}
-        columns={colums}
-        pageSize={3}
-        disableSelectionOnClick
-        checkboxSelection
-      />
-    </div>
+    <Container className="products-container">
+      <Typography variant="h4" align="center" gutterBottom>
+        لیست محصولات
+      </Typography>
+      <Box display="flex" justifyContent="center" mb={3}>
+        <TextField
+          variant="outlined"
+          placeholder="جستجوی محصول..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          style={{ width: '300px' }}
+        />
+      </Box>
+      <Grid container spacing={3}>
+        {filteredProducts.map((product) => (
+          <Grid item xs={12} sm={6} md={4} key={product.id}>
+            <Fade in timeout={500}>
+              <Card className="product-card">
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={product.avatar}
+                  alt={product.title}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="div">
+                    {product.title}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    قیمت: ${product.price}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link to={`product/${product.id}`} className="link">
+                    <IconButton color="primary">
+                      <EditOutlinedIcon />
+                    </IconButton>
+                  </Link>
+                  <IconButton 
+                    color="error" 
+                    onClick={() => handleDeleteProduct(product.id)}
+                  >
+                    <DeleteOutlinedIcon />
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Fade>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 }
