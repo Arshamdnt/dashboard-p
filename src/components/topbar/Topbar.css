@@ -192,3 +192,14 @@
   color: var(--white-color);
 }
 
+@media (max-width: 320px) {
+
+  .topbar {
+    height: 100%;
+    width: 129%;
+   
+  }
+
+  
+}
+

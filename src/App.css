@@ -17,3 +17,14 @@ body {
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 320px) {
+
+  .container {
+        height: 100%;
+        width: 129%;
+   
+  }
+
+  
+}
