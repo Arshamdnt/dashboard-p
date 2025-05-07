@@ -192,11 +192,10 @@
   color: var(--white-color);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
 
   .topbar {
-    height: 100%;
-    width: 129%;
+   width: 111%;
    
   }
 
