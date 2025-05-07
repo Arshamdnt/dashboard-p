@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/dashboard-p/static/css/main.cd7d9d00.css",
+    "main.css": "/dashboard-p/static/css/main.2487a871.css",
     "main.js": "/dashboard-p/static/js/main.c9fb1e90.js",
     "static/media/persian-badkh@t2.ttf": "/dashboard-p/static/media/persian-badkh@t2.497fca95fb1d032627d6.ttf",
     "index.html": "/dashboard-p/index.html",
-    "main.cd7d9d00.css.map": "/dashboard-p/static/css/main.cd7d9d00.css.map",
+    "main.2487a871.css.map": "/dashboard-p/static/css/main.2487a871.css.map",
     "main.c9fb1e90.js.map": "/dashboard-p/static/js/main.c9fb1e90.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd7d9d00.css",
+    "static/css/main.2487a871.css",
     "static/js/main.c9fb1e90.js"
   ]
 }
