@@ -31,3 +31,19 @@
       min-height: 200px;
     }
   }
+
+  @media (max-width: 320px) {
+  .chart {
+    width: 9rem;
+    padding: 10px;
+  }
+
+  .chartTitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .chart > div {
+    min-height: 180px !important;
+  }
+}

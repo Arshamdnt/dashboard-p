@@ -133,4 +133,11 @@
 }
 
 }
+@media (max-width: 320px) {
+.chart-container {
+  width: 8.2rem;
+}
+
+
+}
 

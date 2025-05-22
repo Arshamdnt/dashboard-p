@@ -48,7 +48,7 @@ const Analytics = () => {
           { label: 'نرخ سود', value: '23.45%', icon: <InsightsIcon />, color: '#d32f2f' },
           { label: 'درآمد', value: '$34,567', icon: <MonetizationOnIcon />, color: '#ffa000' },
         ].map((card, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid item xs={12} sm={6} md={3} key={index} >
             <Paper
               elevation={5}
               className="kpi-card"

@@ -119,3 +119,35 @@
         width: 11.2rem;
     }
   }
+
+
+  @media (max-width: 320px) {
+  .feature {
+    width: 12rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .FeatureItem {
+    width: 9rem;
+    margin: 8px 0;
+    padding: 16px;
+  }
+
+  .FeatureMoney {
+    font-size: 20px;
+  }
+
+  .FeatureRate {
+    font-size: 14px;
+  }
+
+  .featureIcon {
+    font-size: 18px;
+  }
+
+  .featureSub {
+    font-size: 12px;
+    text-align: center;
+  }
+}

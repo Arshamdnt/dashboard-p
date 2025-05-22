@@ -94,3 +94,37 @@
         font-size: 12px;
     }
   }
+
+
+  @media (max-width: 320px) {
+  .WidgetLg {
+    padding: 12px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .WidgetLgTitle {
+    font-size: 18px;
+  }
+
+  .WidgetLgImg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .WidgetLgName {
+    font-size: 12px;
+  }
+
+  .WidgetLgTh,
+  .WidgetLgDate,
+  .WidgetLgAmount,
+  .WidgetLgStatus {
+    font-size: 12px;
+  }
+
+  .WidgetLgButton {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+}

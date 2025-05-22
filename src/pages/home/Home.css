@@ -28,3 +28,19 @@
     
   }
 }
+
+@media (max-width: 320px) {
+  .home {
+    width: 11rem;
+    padding: 8px;
+  }
+
+  .homeWidgets {
+    flex-direction: column;
+    margin: 8px 0;
+    gap: 12px;
+    width: 10rem;
+
+  }
+}
+

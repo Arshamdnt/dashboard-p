@@ -153,3 +153,34 @@
   }
 
   
+@media (max-width: 320px) {
+  .widgetSm {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .widgetSmTitle {
+    font-size: 18px;
+  }
+
+  .widgetSmImg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .widgetSmUsername {
+    font-size: 10px;
+  }
+  .widgetSmUserTitle{
+    font-size: 10px;
+  }
+
+  .widgetSmButton {
+   font-size: 2px;
+        padding: 4px 10px;
+  }
+
+  .widgetSmIcon {
+    font-size: 10px !important;
+  }
+}
