@@ -164,20 +164,23 @@
   }
 
   .widgetSmImg {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
   }
 
   .widgetSmUsername {
-    font-size: 10px;
+    font-size: 9px;
   }
   .widgetSmUserTitle{
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .widgetSmButton {
    font-size: 2px;
-        padding: 4px 10px;
+    padding: 4px 5px;
+  }
+  .widgetSmButton-text{
+    font-size: 9px;
   }
 
   .widgetSmIcon {

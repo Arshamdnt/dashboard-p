@@ -138,6 +138,10 @@
   width: 8.2rem;
 }
 
+.MuiGrid-root .MuiGrid-container .MuiGrid-spacing-xs-4 .esponsive-class .css-480o17-MuiGrid-root{
+  width: 9rem !important;
+}
+
 
 }
 

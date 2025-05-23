@@ -40,7 +40,11 @@ const Analytics = () => {
       <Typography variant="h4" className="analytics-title">
         داشبورد آنالیز 
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{
+    '@media (max-width: 320px)': {
+      width: '11.4rem !important' ,
+    },
+  }}>
         {/* کارت‌های KPI */}
         {[
           { label: 'مجموع فروش', value: '$56,789', icon: <TrendingUpIcon />, color: '#1976d2' },

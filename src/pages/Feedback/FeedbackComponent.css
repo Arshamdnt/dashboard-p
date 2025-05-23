@@ -152,3 +152,11 @@
       padding: 10px;
     }
   }
+@media (max-width: 320px) {
+    .feedback-section{
+          width: 7.6rem !important;
+    }
+   
+  }
+
+

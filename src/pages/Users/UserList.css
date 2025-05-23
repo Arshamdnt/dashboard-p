@@ -39,4 +39,9 @@
       font-size: 1.2rem !important;
     }
     }
-    
+  @media (max-width:320px) {
+    .respinsive-test{
+       width: 11.5rem !important;
+    }
+
+    }

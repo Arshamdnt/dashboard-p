@@ -47,7 +47,7 @@ export default function UserCardList() {
           className={`search-field ${isDark ? 'dark-mode' : ''}`}
         />
       </Box>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} sx={{'@media (max-width: 320px)': {width: '11.4rem !important' ,},}} >
         {filteredUsers.map((user) => (
           <Grid item key={user.id} xs={12} sm={6} md={4}>
             <Fade in timeout={500}>

@@ -23,7 +23,7 @@ const WidgetSm = () => {
                         </div>
                         <button className="widgetSmButton">
                             <VisibilityIcon className="widgetSmIcon" />
-                            مشاهده
+                             <span className='widgetSmButton-text'>مشاهده</span>
                         </button>
                     </li>
                 ))}
